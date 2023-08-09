@@ -1,5 +1,6 @@
 <?php
 
+// use App\Http\Controllers\TodoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    // return view('welcome');
-    return 'Timezone: ' . config('app.timezone') . '<br>' . 'User name: ' . config('app.username');
+    return view('welcome');
 });
+
+Route::get('/todo/create', 'App\Http\Controllers\TodoController@create');
+
+Route::get('/todo', 'App\Http\Controllers\TodoController@index');
+
+Route::get('/todo/{id}', 'App\Http\Controllers\TodoController@find');
+

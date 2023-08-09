@@ -18,10 +18,6 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
-    /* User name */
-
-    'username' => env('NAME', 'Guest'),
-
     /*
     |--------------------------------------------------------------------------
     | Application Environment
@@ -74,7 +70,7 @@ return [
     |
     */
 
-    'timezone' => 'Europe/Moscow',
+    'timezone' => 'UTC',
 
     /*
     |--------------------------------------------------------------------------
